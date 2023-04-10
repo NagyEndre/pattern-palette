@@ -1,4 +1,4 @@
-# Design Pattern Exercises
+# PatternPalette
 
-Provides design patterns exercises in TypeScript language.
+Provides design pattern examples written in TypeScript.
 Request to the `/random` route will return random patterns.
