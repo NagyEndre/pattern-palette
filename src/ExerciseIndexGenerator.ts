@@ -15,7 +15,7 @@ export default class ExerciseIndexGenerator {
     this.randomIndexGenerator = randomIndexGenerator;
   }
 
-  public getNextExerciseIndex(): number {
+  public getNext(): number {
     if (this.exerciseCount === 1) {
       return 0;
     }

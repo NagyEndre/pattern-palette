@@ -16,7 +16,7 @@ const exerciseIndexGenerator = new ExerciseIndexGenerator(
 );
 
 app.get("/random", (req, res) => {
-  const index = exerciseIndexGenerator.getNextExerciseIndex();
+  const index = exerciseIndexGenerator.getNext();
 
   const path = `./src/exercises/${exerciseFiles.at(index)}`;
   let pattern = readFileSync(path, { encoding: "utf-8" });
