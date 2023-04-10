@@ -1,4 +1,4 @@
-export default class ExerciseRandomizer {
+export default class ExerciseIndexGenerator {
   private readonly exerciseCount: number;
   private previousIndex: number | null = null;
 
