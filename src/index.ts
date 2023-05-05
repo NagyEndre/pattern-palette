@@ -1,5 +1,5 @@
-import express from "express";
 import cors from "cors";
+import express from "express";
 import { readFileSync, readdirSync } from "fs";
 import ExerciseIndexGenerator, {
   getRandomNumber,
@@ -18,7 +18,7 @@ const exerciseIndexGenerator = new ExerciseIndexGenerator(
 app.get("/random", (req, res) => {
   const index = exerciseIndexGenerator.getNext();
 
-  const path = `./src/exercises/${exerciseFiles.at(index)}`;
+  const path = `./src/exercises/${exerciseFiles[index]}`;
   let pattern = readFileSync(path, { encoding: "utf-8" });
   pattern = pattern.trimEnd();
 
