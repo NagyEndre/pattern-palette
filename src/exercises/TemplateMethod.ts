@@ -1,3 +1,4 @@
+// Template method pattern
 abstract class TestSequence {
   public execute() {
     this.prepareEnvironment();

@@ -1,3 +1,4 @@
+// Singleton pattern
 class Singleton {
   private static instance: Singleton;
 

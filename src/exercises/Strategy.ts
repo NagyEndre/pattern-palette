@@ -1,3 +1,4 @@
+// Strategy pattern
 interface StorageStrategy {
   store(data: string): void;
 }
@@ -20,12 +21,3 @@ class Client {
     this.strategy.store(data);
   }
 }
-
-const cloud = new CloudStorage();
-const local = new LocalStorage();
-const client = new Client();
-
-client.setStrategy(cloud);
-client.save("secret");
-client.setStrategy(local);
-client.save("secret");
