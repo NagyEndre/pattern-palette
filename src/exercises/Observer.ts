@@ -15,8 +15,8 @@ class ConcretePublisher implements Publisher {
   private observers: Observer[] = [];
 
   public attach(observer: Observer): void {
-    const isExist = this.observers.includes(observer);
-    if (!isExist) {
+    const isSubscribed = this.observers.includes(observer);
+    if (!isSubscribed) {
       this.observers.push(observer);
     }
   }
@@ -30,9 +30,7 @@ class ConcretePublisher implements Publisher {
   }
 
   public notify(): void {
-    for (const observer of this.observers) {
-      observer.update(this);
-    }
+    this.observers.forEach((observer) => observer.update(this));
   }
 
   public someBusinessLogic(): void {
